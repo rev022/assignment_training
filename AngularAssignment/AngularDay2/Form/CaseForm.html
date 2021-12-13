@@ -1,0 +1,74 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+    taskid
+     <input type="text" name="taskid" placeholder="taskid" formControlName="taskid"/>
+     
+     <br/>
+     ownerid
+     <input type="text" name="ownerid" placeholder="ownerid" formControlName="ownerid"/>
+     
+     <br/>
+     creatorid
+     <input type="text" name="creatorid" placeholder="creatorid" formControlName="creatorid"/>
+     
+     <br/>
+     taskname
+     <input type="text" name="taskname" placeholder="taskname" formControlName="taskname"/>
+     
+     <br/>
+     description
+     <input type="text" name="description" placeholder="description" formControlName="description"/>
+     
+     <br/>
+     status<select name="status" formControlName="status">
+         <option value="Ongoing">Ongoing</option>
+         <option value="Not Started">Not Started</option>
+         <option value="Completed">Completed</option>
+     </select>
+     
+     
+     <br/>
+     priority<select name="priority" formControlName="priority">
+         <option value="High">High</option>
+         <option value="Medium">Medium</option>
+         <option value="Low">Low</option>
+     </select>
+     
+     
+     <br/>
+     notes
+     <input type="text" name="notes" placeholder="notes" formControlName="notes"/>
+     
+     <br/>
+ 
+     isBookmarked
+     <select name="isBookmarked" formControlName="isBookmarked">
+         <option value="True">True</option>
+         <option value="False">False</option>
+         
+     </select>
+     <br/>
+     
+     created_on
+     <input type="date" name="created_on" placeholder="created_on" formControlName="created_on"/>
+     <br/>
+ 
+     status_changed_on<input type="date" name="status_changed_on" placeholder="status_changed_on" formControlName="status_changed_on"/>
+     
+     
+     <br/>
+     <input type="submit" [disabled]="!form.valid" value="submit"/>
+     taskid is {{tid}}
+     ownerid is {{oid}}
+    creatorid is {{cid}}
+     taskname is {{tname}}
+     description is {{des}}
+     status is {{stat}}
+     priority is {{pri}}
+     notes is {{not}}
+     isBookmarked is {{isbok}}
+     created_on is {{crea}}
+     status_changed_on is {{stacrea}}
+ 
+     
+     </form>
